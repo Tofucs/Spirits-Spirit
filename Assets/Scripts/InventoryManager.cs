@@ -31,6 +31,15 @@ public class InventoryManager : MonoBehaviour
             CycleActiveItem(1);
         }
 
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            List<HoldableObject> ingredients = GetAllItems();
+            if (ingredients.Count > 0)
+            {
+                GameManager.Instance.TryCraftItems(ingredients); 
+            }
+        }
+
         UpdateItemPositions();
     }
 
@@ -111,6 +120,19 @@ public class InventoryManager : MonoBehaviour
         activeItemIndex = activeItemIndex < 0 ? 0 : activeItemIndex - 1;
     }
 
+    public void ClearInventory()
+    {
+        foreach (var item in items)
+        {
+            if (item.visual != null)
+            {
+                Destroy(item.visual.gameObject);
+            }
+        }
+        items.Clear();
+        activeItemIndex = -1;
+    }
+
     public void DropActiveItem(Vector3 playerPosition, bool facingRight)
     {
         if (items.Count == 0) return;
@@ -152,6 +174,33 @@ public class InventoryManager : MonoBehaviour
     void OnActiveItemChanged()
     {
         // does this need to change at all?? 
+    }
+
+    public List<HoldableObject> GetAllItems()
+    {
+        List<HoldableObject> holdableObjects = new List<HoldableObject>();
+        foreach (var item in items)
+        {
+            holdableObjects.Add(item.data);
+        }
+        return holdableObjects;
+    }
+
+    public void RemoveActiveItem()
+    {
+        if (items.Count == 0) return;
+
+        Destroy(items[activeItemIndex].visual.gameObject);
+        items.RemoveAt(activeItemIndex);
+        
+        if (items.Count > 0)
+        {
+            activeItemIndex = Mathf.Clamp(activeItemIndex, 0, items.Count - 1);
+        }
+        else
+        {
+            activeItemIndex = -1;
+        }
     }
 }
 

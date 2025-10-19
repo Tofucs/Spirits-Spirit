@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
         HandleSwitchViews();
         HandleItemPickup();
         HandleMovement();
-        Debug.Log(nearbyInteractables.Count);
     }
 
     void StartSwap()
@@ -68,7 +67,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && !isSwitchingViews)
         {
-            BarSceneSwapper.Instance.StartSwap();
+            GameManager.Instance.StartSwap();
             isSwitchingViews = true;
         }
     }
@@ -76,13 +75,6 @@ public class PlayerController : MonoBehaviour
     void HandleItemPickup()
     {
         bool shiftHeld = Input.GetKey(KeyCode.LeftShift);
-        for (int i = 0; i < nearbyItems.Count; i++)
-        {
-            if (nearbyItems[i] == null)
-                Debug.Log($"Item {i}: NULL/DESTROYED");
-            else
-                Debug.Log($"Item {i}: {nearbyItems[i].name}");
-        }
 
         if (nearbyInteractables.Count != 0 && !shiftHeld)
         {
@@ -107,7 +99,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.J))
             {
                 TryToInteract(nearest);
-                Debug.Log("interactable nearby");
+                // Debug.Log("interactable nearby");
 
            
             }
@@ -117,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
         if (nearbyItems.Count == 0)
         {
-            Debug.Log("No items nearby");
+            // Debug.Log("No items nearby");
             if (Input.GetKeyDown(KeyCode.J))
             {
                 inventoryManager.DropActiveItem(transform.position, facingRight);
@@ -194,7 +186,6 @@ public class PlayerController : MonoBehaviour
                 if (item != null && !nearbyItems.Contains(item))
                 {
                     nearbyItems.Add(item);
-                    Debug.Log($"{item.itemData.itemName} is now in range");
                 }
             }
             if (((1 << other.gameObject.layer) & interactionLayer.value) > 0)

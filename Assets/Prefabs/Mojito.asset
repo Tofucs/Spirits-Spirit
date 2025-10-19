@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7469f612e534e4e5aba955a7aa6c159f, type: 3}
+  m_Name: Mojito
+  m_EditorClassIdentifier: Assembly-CSharp::Drink
+  drinkName: Mojito
+  drinkIcon: {fileID: 0}
+  ingredients:
+  - ingredient: {fileID: 11400000, guid: aa433a4626134422991dec841d236584, type: 2}
+    isMissing: 1
+  - ingredient: {fileID: 11400000, guid: b8aefa8a921914b22abddeb2da8df51a, type: 2}
+    isMissing: 1
+  - ingredient: {fileID: 11400000, guid: ce18a4e3a77554bf8a9bc7d5d8832154, type: 2}
+    isMissing: 0
+  - ingredient: {fileID: 11400000, guid: eb78527997aaa47f48a996901a928196, type: 2}
+    isMissing: 1
+  timeLimit: 45

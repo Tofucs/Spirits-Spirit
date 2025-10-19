@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a24452e1fe62e4fa3ad149007acc0829, type: 3}
-  m_Name: Lime
+  m_Name: Rum
   m_EditorClassIdentifier: Assembly-CSharp::HoldableObject
-  itemName: Lime
+  itemName: Rum
+  isTool: 0
   icon: {fileID: 0}
-  worldPrefab: {fileID: 494329683764897188, guid: a6a2c6133a9ba4eeb881c7c43351849a, type: 3}
+  worldPrefab: {fileID: 4696286702330245284, guid: a2d12b8086e5b4424a099e99a368deda, type: 3}
+  visualPrefab: {fileID: 3595400825634844979, guid: 362d3e3057fe84fd9926654049b480fb, type: 3}
