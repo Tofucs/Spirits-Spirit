@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     public bool isSwitchingViews;
 
+    private bool facingRight = true;
+
 
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameObject spriteObject;
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InventoryManager inventoryManager;
 
     private List<HoldableItem> nearbyItems = new List<HoldableItem>();
+    private List<InteractableItem> nearbyInteractables = new List<InteractableItem>();
 
    
     void Start()
@@ -38,6 +41,7 @@ public class PlayerController : MonoBehaviour
         HandleSwitchViews();
         HandleItemPickup();
         HandleMovement();
+        Debug.Log(nearbyInteractables.Count);
     }
 
     void StartSwap()
@@ -71,15 +75,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleItemPickup()
     {
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            TryToPickup();
-        }
-    }
-
-    void TryToPickup()
-    {
-
+        bool shiftHeld = Input.GetKey(KeyCode.LeftShift);
         for (int i = 0; i < nearbyItems.Count; i++)
         {
             if (nearbyItems[i] == null)
@@ -87,11 +83,46 @@ public class PlayerController : MonoBehaviour
             else
                 Debug.Log($"Item {i}: {nearbyItems[i].name}");
         }
-    
-    
+
+        if (nearbyInteractables.Count != 0 && !shiftHeld)
+        {
+            // prioritize an interactable over any pick up ables
+            nearbyInteractables.RemoveAll(item => item == null);
+
+            InteractableItem nearest = nearbyInteractables[0];
+            float nearestDist = Vector2.Distance(transform.position, nearest.transform.position);
+
+            foreach (var item in nearbyInteractables)
+            {
+                float dist = Vector2.Distance(transform.position, item.transform.position);
+                if (dist < nearestDist)
+                {
+                    nearest = item;
+                    nearestDist = dist;
+                }
+            }
+
+            //highlight
+
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                TryToInteract(nearest);
+                Debug.Log("interactable nearby");
+
+           
+            }
+            return;
+        }
+
+
         if (nearbyItems.Count == 0)
         {
             Debug.Log("No items nearby");
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                inventoryManager.DropActiveItem(transform.position, facingRight);
+            }
+
             return;
         }
 
@@ -110,6 +141,37 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // highlight closest
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            TryToPickup(closest);
+        }
+    }
+    
+    void TryToInteract(InteractableItem closest)
+    {
+        // idk trigger the spawn of the holdable object that the interactable spawns, or the event
+        Debug.Log($"Interacted with {closest.itemData.itemName}");
+        if (closest.itemData.triggersEvent)
+        {
+
+        }
+        else
+        {
+            if (inventoryManager.AddItemFromData(closest.itemData.holdableObject))
+            {
+                Debug.Log($"Picked up item from {closest.itemData.itemName}");
+            }
+            else
+            {
+                Debug.Log("Inventory full!");
+            }
+        }
+    }
+
+    void TryToPickup(HoldableItem closest)
+    {
         if (inventoryManager.AddItem(closest))
         {
             nearbyItems.Remove(closest);
@@ -126,12 +188,25 @@ public class PlayerController : MonoBehaviour
     {
         if (((1 << other.gameObject.layer) & interactMask.value) > 0)
         {
-            HoldableItem item = other.GetComponent<HoldableItem>();
-            if (item != null && !nearbyItems.Contains(item))
+            if (((1 << other.gameObject.layer) & holdableLayer.value) > 0)
             {
-                nearbyItems.Add(item);
-                Debug.Log($"{item.itemData.itemName} is now in range");
+                HoldableItem item = other.GetComponent<HoldableItem>();
+                if (item != null && !nearbyItems.Contains(item))
+                {
+                    nearbyItems.Add(item);
+                    Debug.Log($"{item.itemData.itemName} is now in range");
+                }
             }
+            if (((1 << other.gameObject.layer) & interactionLayer.value) > 0)
+            {
+                InteractableItem item = other.GetComponent<InteractableItem>();
+                if (item != null && !nearbyInteractables.Contains(item))
+                {
+                    nearbyInteractables.Add(item);
+                    Debug.Log($"{item.itemData.itemName} is now in range");
+                }
+            }
+            // highlight the object
         }
     }
 
@@ -143,6 +218,14 @@ public class PlayerController : MonoBehaviour
             if (item != null)
             {
                 nearbyItems.Remove(item);
+            }
+        }
+        if (((1 << other.gameObject.layer) & interactionLayer.value) > 0)
+        {
+            InteractableItem item = other.GetComponent<InteractableItem>();
+            if (item != null)
+            {
+                nearbyInteractables.Remove(item);
             }
         }
     }

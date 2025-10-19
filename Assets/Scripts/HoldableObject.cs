@@ -6,4 +6,6 @@ public class HoldableObject : ScriptableObject
     public string itemName;
     public Sprite icon;
     public GameObject worldPrefab;
+
+    public GameObject visualPrefab;
 }
