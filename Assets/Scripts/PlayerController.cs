@@ -79,11 +79,23 @@ public class PlayerController : MonoBehaviour
 
     void TryToPickup()
     {
+
+        for (int i = 0; i < nearbyItems.Count; i++)
+        {
+            if (nearbyItems[i] == null)
+                Debug.Log($"Item {i}: NULL/DESTROYED");
+            else
+                Debug.Log($"Item {i}: {nearbyItems[i].name}");
+        }
+    
+    
         if (nearbyItems.Count == 0)
         {
             Debug.Log("No items nearby");
             return;
         }
+
+        nearbyItems.RemoveAll(item => item == null); // liikeeeeeeee bruhhhh
 
         HoldableItem closest = nearbyItems[0];
         float closestDist = Vector2.Distance(transform.position, closest.transform.position);
