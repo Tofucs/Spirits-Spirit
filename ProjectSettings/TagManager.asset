@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Interactable Items
   - Holdable Items
-  - 
+  - Drink Station
   - 
   - 
   - 
@@ -40,6 +40,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: CustomerView
+    uniqueID: 689702115
+    locked: 0
+  - name: BartenderView
+    uniqueID: 466529307
+    locked: 0
+  - name: Player
+    uniqueID: 2139080459
     locked: 0
   m_RenderingLayers:
   - Default
