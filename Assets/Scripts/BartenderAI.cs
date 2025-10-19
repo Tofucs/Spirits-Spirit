@@ -61,16 +61,12 @@ public class BartenderAI : MonoBehaviour
     {
         Debug.Log($"Bartender fetching {ingredient.itemName}");
         
-        // Walk to storage
         yield return StartCoroutine(MoveToPosition(ingredientStorage.position));
         
-        // Pause to "pick up" ingredient
         yield return new WaitForSeconds(0.5f);
         
-        // Walk back to drink
         yield return StartCoroutine(MoveToPosition(drinkStation.transform.position));
         
-        // Pause to add ingredient
         yield return new WaitForSeconds(0.5f);
     }
 

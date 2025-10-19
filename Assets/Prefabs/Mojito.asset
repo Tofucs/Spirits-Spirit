@@ -15,7 +15,7 @@ MonoBehaviour:
   drinkName: Mojito
   drinkIcon: {fileID: 0}
   ingredients:
-  - ingredient: {fileID: 11400000, guid: aa433a4626134422991dec841d236584, type: 2}
+  - ingredient: {fileID: 11400000, guid: d5e937e4489c246cfb08bc6ce15cab55, type: 2}
     isMissing: 1
   - ingredient: {fileID: 11400000, guid: b8aefa8a921914b22abddeb2da8df51a, type: 2}
     isMissing: 1

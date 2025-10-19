@@ -52,6 +52,7 @@ public class DrinkStation : MonoBehaviour
             addedIngredients.Add(ingredient);
             Debug.Log($"Added {ingredient.itemName} to drink ({CurrentIngredientIndex}/{currentDrink.ingredients.Count})");
             
+            GameManager.Instance.UpdateIngredientUI(CurrentIngredientIndex - 1, true);
             if (IsComplete)
             {
                 OnDrinkComplete();

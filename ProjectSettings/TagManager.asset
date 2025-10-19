@@ -47,5 +47,8 @@ TagManager:
   - name: BartenderView
     uniqueID: 466529307
     locked: 0
+  - name: Player
+    uniqueID: 2139080459
+    locked: 0
   m_RenderingLayers:
   - Default

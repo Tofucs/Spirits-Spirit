@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 59bcbe82dfc1440fc82ad08fa0af8b58
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 954811714757731046
+    second: SHADING_bartender_0
+  - first:
+      213: 5208001538244852925
+    second: SHADING_bartender_1
+  - first:
+      213: -8324443157613815647
+    second: SHADING_bartender_2
+  - first:
+      213: 1464792112285463066
+    second: SHADING_bartender_3
+  - first:
+      213: 6777450024699437495
+    second: SHADING_bartender_4
+  - first:
+      213: -3282631324327507328
+    second: SHADING_bartender_5
+  - first:
+      213: -4650271580045831201
+    second: SHADING_bartender_6
+  - first:
+      213: -2462533767603559985
+    second: SHADING_bartender_7
+  - first:
+      213: 5477836158377184431
+    second: SHADING_bartender_8
+  - first:
+      213: -4729286805958025526
+    second: SHADING_bartender_9
+  - first:
+      213: 3408186395081209672
+    second: SHADING_bartender_10
+  - first:
+      213: -8662766178464047021
+    second: SHADING_bartender_11
+  - first:
+      213: 8343709936616691815
+    second: SHADING_bartender_12
+  - first:
+      213: 1459213818999842344
+    second: SHADING_bartender_13
+  - first:
+      213: 4829048044865583620
+    second: SHADING_bartender_14
+  - first:
+      213: 2277334352559488177
+    second: SHADING_bartender_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SHADING_bartender_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 959
+        width: 308
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2248d123c204d00800000000000000
+      internalID: 954811714757731046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 465
+        width: 382
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbcb5cc4ec9864840800000000000000
+      internalID: 5208001538244852925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_2
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 465
+        width: 382
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a85f7d8d03a97c80800000000000000
+      internalID: -8324443157613815647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_3
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 958
+        width: 312
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a12b1925aacf35410800000000000000
+      internalID: 1464792112285463066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_4
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 538
+        width: 1086
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b12c2593e65e0e50800000000000000
+      internalID: 6777450024699437495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_5
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 461
+        width: 328
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a83e0e330c172d0800000000000000
+      internalID: -3282631324327507328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 380
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3164ad2aae67fb0800000000000000
+      internalID: -4650271580045831201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_7
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 325
+        width: 1083
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc1e59ed59253ddd0800000000000000
+      internalID: -2462533767603559985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_8
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 162
+        width: 380
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: facccd596fe250c40800000000000000
+      internalID: 5477836158377184431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_9
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 269
+        width: 225
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace1ee1f4b23e5eb0800000000000000
+      internalID: -4729286805958025526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_10
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 117
+        width: 286
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847722f087f4c4f20800000000000000
+      internalID: 3408186395081209672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_11
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 159
+        width: 422
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350e168de0ca7c780800000000000000
+      internalID: -8662766178464047021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_12
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 158
+        width: 185
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7685fe00bffcac370800000000000000
+      internalID: 8343709936616691815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_13
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 158
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826a3d4bc3b204410800000000000000
+      internalID: 1459213818999842344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_14
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 127
+        width: 78
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40af1858c99340340800000000000000
+      internalID: 4829048044865583620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHADING_bartender_15
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 148
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc3a1f1787ba9f10800000000000000
+      internalID: 2277334352559488177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SHADING_bartender_0: 954811714757731046
+      SHADING_bartender_1: 5208001538244852925
+      SHADING_bartender_10: 3408186395081209672
+      SHADING_bartender_11: -8662766178464047021
+      SHADING_bartender_12: 8343709936616691815
+      SHADING_bartender_13: 1459213818999842344
+      SHADING_bartender_14: 4829048044865583620
+      SHADING_bartender_15: 2277334352559488177
+      SHADING_bartender_2: -8324443157613815647
+      SHADING_bartender_3: 1464792112285463066
+      SHADING_bartender_4: 6777450024699437495
+      SHADING_bartender_5: -3282631324327507328
+      SHADING_bartender_6: -4650271580045831201
+      SHADING_bartender_7: -2462533767603559985
+      SHADING_bartender_8: 5477836158377184431
+      SHADING_bartender_9: -4729286805958025526
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

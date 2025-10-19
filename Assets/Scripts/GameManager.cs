@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
 
     [Header("Level")]
     [SerializeField] private LevelData currentLevel;
+
+    [Header("UI")]
+    [SerializeField] private DrinkTimerUI timerUI; 
+    [SerializeField] private IngredientsListUI ingredientsUI;
     
     // [Header("Objects")]
     [SerializeField] private BartenderAI bartender;
@@ -107,12 +111,20 @@ public class GameManager : MonoBehaviour
         Drink drink = CurrentDrink;
         drinkStation.StartDrink(drink);
         bartender.StartMakingDrink(drink);
-        
+
         currentTimer = drink.timeLimit;
         timerActive = true;
-        
+        timerUI.ShowDrinkTimer(drink);
+        ingredientsUI.ShowIngredientsList(drink);
+
         Debug.Log($"Drink ordered: {drink.drinkName}");
     }
+    
+    public void UpdateIngredientUI(int index, bool completed)
+    {
+        ingredientsUI.UpdateIngredientStatus(index, completed);
+    }
+
 
     public void StartSwap()
     {
@@ -153,6 +165,8 @@ public class GameManager : MonoBehaviour
     public void OnDrinkCompleted()
     {
         timerActive = false;
+        timerUI.HideTimer();
+        ingredientsUI.HideIngredientsList();
         Debug.Log($"Drink {CurrentDrink.drinkName} completed, move to next");
 
         currentDrinkIndex++;
@@ -163,6 +177,8 @@ public class GameManager : MonoBehaviour
     {
         timerActive = false;
         hearts--;
+        timerUI.HideTimer();
+        ingredientsUI.HideIngredientsList();
         // heartsUI.SetHearts(hearts);
 
         Debug.Log("timer expired");
@@ -221,7 +237,7 @@ public class GameManager : MonoBehaviour
         if (timerActive)
         {
             currentTimer -= Time.deltaTime;
-            //timerUI.UpdateTimer(currentTimer);
+            timerUI.UpdateTimer(currentTimer);
             
             if (currentTimer <= 0)
             {

@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     private List<HoldableItem> nearbyItems = new List<HoldableItem>();
     private List<InteractableItem> nearbyInteractables = new List<InteractableItem>();
+    private float time = 0f;
 
    
     void Start()
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
         HandleSwitchViews();
         HandleItemPickup();
         HandleMovement();
+        FaceDirection(facingRight);
     }
 
     void StartSwap()
@@ -220,7 +222,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (Input.GetKeyDown(KeyCode.J) && (interactMask.value & (1 << collision.gameObject.layer)) > 0)
@@ -231,9 +233,16 @@ public class PlayerController : MonoBehaviour
             }
             if (((1 << collision.gameObject.layer) & holdableLayer.value) > 0)
             {
-                
+
             }
         }
+    }
+    
+    public void FaceDirection(bool facingRight)
+    {
+        Vector3 scale = transform.localScale;
+        scale.x = facingRight ? Mathf.Abs(scale.x) : -Mathf.Abs(scale.x);
+        transform.localScale = scale;
     }
 
     void HandleMovement()
@@ -241,9 +250,25 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
+        if (moveX < 0)
+        {
+            facingRight = true;
+        }
+        else if (moveX > 0)
+        {
+            facingRight = false;
+        }
+
         Vector2 movement = new Vector2(moveX, moveY).normalized;
         float moveSpeed = isDashing ? 8f : 4f;
 
-        rb.linearVelocity = movement * moveSpeed;
+        time += Time.fixedDeltaTime;
+        float bobbingVelocity = Mathf.Sin(time * 0.3f) * 0.04f * 2f * Mathf.PI;
+
+        rb.linearVelocity = new Vector3(
+            movement.x * moveSpeed, 
+            movement.y * moveSpeed + bobbingVelocity, 
+            0f
+        );
     }
 }
